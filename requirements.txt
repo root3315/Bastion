@@ -1,0 +1,9 @@
+# Bastion Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+PyYAML>=6.0
+
+# Optional dependencies (uncomment if needed)
+# requests>=2.28.0
+# cryptography>=39.0.0

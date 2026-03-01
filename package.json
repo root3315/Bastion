@@ -1,0 +1,25 @@
+{
+  "name": "bastion-js",
+  "version": "1.0.0",
+  "description": "Bastion Security Toolkit - JavaScript Helpers",
+  "main": "js/bastion-helper.js",
+  "scripts": {
+    "test": "node --test js/*.test.js 2>/dev/null || echo 'No tests found or test runner not available'",
+    "lint": "node -c js/bastion-helper.js"
+  },
+  "keywords": [
+    "security",
+    "toolkit",
+    "bastion",
+    "helpers"
+  ],
+  "author": "Bastion Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

@@ -1,0 +1,54 @@
+# Bastion Configuration
+# 
+# This file configures the behavior of the Bastion security toolkit.
+# All settings can be overridden via environment variables.
+#
+# Environment variable mappings:
+#   BASTION_LOG_LEVEL -> bastion.log_level
+#   BASTION_OUTPUT_DIR -> bastion.output_dir
+#   BASTION_CHECK_LEVEL -> security.check_level
+
+# Main Bastion settings
+bastion:
+  # Logging level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_level: INFO
+  
+  # Directory for output files (reports, logs)
+  output_dir: ./reports
+  
+  # Modules to enable
+  modules:
+    - core
+    - validator
+  
+  # Connection settings
+  max_retries: 3
+  timeout: 30
+
+# Security check settings
+security:
+  # Check level: basic, intermediate, advanced
+  check_level: basic
+  
+  # Whether to fail on warnings
+  fail_on_warning: false
+  
+  # Patterns to ignore during checks
+  ignore_patterns:
+    - "*.log"
+    - "*.tmp"
+    - ".git/*"
+
+# Logging configuration
+logging:
+  # Log format string
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  # Log file name (relative to output_dir)
+  file: bastion.log
+  
+  # Maximum log file size in MB before rotation
+  max_size_mb: 10
+  
+  # Number of backup log files to keep
+  backup_count: 5
